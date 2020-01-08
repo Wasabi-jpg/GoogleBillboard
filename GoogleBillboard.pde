@@ -2,14 +2,14 @@ public final static String e = "2.7182818284590452353602874713526624977572470936
 public void setup()  
 {            
     //your code here 
-    int x = 0;
-    int y = 10;
-    String digits = e.substring(x,y);
-    double dNum = Double.parseDouble(digits);
-    if(isPrime(dNum)==false){
-    	x++;
-    	y++;
-    }
+    for(int i = 2; i < e.length()-10;i++){
+    	String digits = e.substring(i,i+11);
+   		double dNum = Double.parseDouble(digits);
+   if(isPrime(dNum)==true){
+   		System.out.println(dNum);
+	   		}
+   }
+    
 }  
 public void draw()  
 {   
@@ -18,10 +18,11 @@ public void draw()
 public boolean isPrime(double dNum)  
 {   
     //your code here
-    for(int i = 0; i < Math.sqrt(dNum);i++){
-    	if(dNum%i==0){
-    		return false;
-    	}
-    }   
+   for(int i = 2; i < Math.sqrt(dNum); i++){
+   	if(dNum % i == 0){
+   		return false;
+   	}
+   }
+    	    
     return true;  
 } 
