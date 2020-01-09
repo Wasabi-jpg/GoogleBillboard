@@ -21,13 +21,14 @@ public void setup()
     int x = 2;
     String digits = e.substring(x,x+10);
     double dNum = Double.parseDouble(digits);
+        
     while(isPrime(dNum)==false){
       x++;
-      if(isPrime(dNum)==true){
-        System.out.println(dNum);
-        break;
-      }
+    digits = e.substring(x,x+10);
+    dNum = Double.parseDouble(digits);
+    
     }
+    System.out.println(dNum);
       
       
     
